@@ -29,3 +29,5 @@ function setPost(newPost) {
 function renderPost() {
     postNode.innerText = post;
 }
+
+//йоу
