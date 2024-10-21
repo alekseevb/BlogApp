@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog App</title>
+    <link rel="shortcut icon" href="icons8-сотрудничество-96.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -18,7 +19,11 @@
         <div class="blog__left">
             <h2 class="blog__left-title">Новый пост</h2>
             <input id="js-title-input" class="blog__left-subtitle" placeholder="Заголовок" type="text">
+            <textarea id="js-text-input" class="blog__left-text" placeholder="Напиши пост" name=""></textarea>
             <button id="js-publication-btn" class="blog__left-btn">Опубликовать</button>
+            <div id="js-validationMessage" class="blog__validationMessage blog__validationMessage_hidden">Длина
+                заголовка больше 100
+                символов</div>
         </div>
         <div class="blog__right">
             <h2 class="blog__right-title">Лента</h2>

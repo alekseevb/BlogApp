@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* outline: 2px solid green; */
 }
 
 body {
@@ -18,21 +19,15 @@ body {
     display: flex;
     justify-content: space-between;
     gap: 100px;
+    padding: 0 15px;
 }
 
 .blog__left,
 .blog__right {
     width: 50%;
-}
-
-
-.blog__left {
-    width: 500px;
-    height: 250px;
-    flex-shrink: 0;
-
-    display: flex;
-    flex-direction: column;
+    height: 100%;
+    min-height: 580px;
+    padding: 40px;
 }
 
 .blog__left-title,
@@ -46,8 +41,21 @@ body {
     margin-bottom: 60px;
 }
 
+.blog__left-text {
+    width: 100%;
+    height: 250px;
+    margin-bottom: 30px;
+    padding-left: 20px;
+
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
 .blog__left-subtitle {
-    width: 500px;
+    width: 100%;
     height: 60px;
     flex-shrink: 0;
 
@@ -59,9 +67,11 @@ body {
 
     margin-bottom: 30px;
     padding-left: 20px;
+
 }
 
-.blog__left-subtitle::placeholder {
+.blog__left-subtitle::placeholder,
+.blog__left-text::placeholder {
     color: #979797;
     font-size: 32px;
     font-style: normal;
@@ -69,9 +79,14 @@ body {
     line-height: normal;
 }
 
+.blog__left-text::placeholder {
+    padding-top: 11px;
+}
+
 .blog__left-btn {
-    width: 500px;
+    width: 100%;
     height: 60px;
+    border-radius: 3px;
     flex-shrink: 0;
     background-color: #0094FF;
     border: none;
@@ -89,11 +104,62 @@ body {
     background-color: #047ace;
 }
 
+.blog__right {
+    background-color: rgba(151, 151, 151, 0.1);
+    ;
+    padding: 40px;
+    border-radius: 10px;
+}
+
 .blog__right-subtitle {
-    color: #979797;
+    color: black;
     font-family: Inter;
     font-size: 32px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+}
+
+.post {
+    margin-bottom: 30px;
+
+}
+
+.post__title {
+    color: #000;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    margin-bottom: 10px;
+}
+
+.post__text {
+    color: #000;
+    font-family: Inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.blog__validationMessage {
+    color: red;
+    margin-top: 30px;
+}
+
+.blog__validationMessage_hidden {
+    display: none;
+}
+
+.post__data {
+    color: #0094FF;
+    font-family: Inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 15px;
 }
