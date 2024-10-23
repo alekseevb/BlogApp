@@ -65,8 +65,9 @@ function getPostFromUser() {
 function addPost({ title, text }) {
 
     const currentDate = new Date();
-    const dt = `${currentDate.getDay()}.${currentDate.getMonth()}.${currentDate.getFullYear()} ${currentDate.getHours()}:${currentDate.getMinutes()}`
-
+    console.log(currentDate.getTime())
+    const dt = `${currentDate.getDate()}-${('0' + (currentDate.getMonth() + 1)).slice(-2)}-${currentDate.getFullYear()} ${('0' + (currentDate.getHours())).slice(-2)}:${('0' + (currentDate.getMinutes())).slice(-2)}`
+    console.log(dt)
     posts.push({
         dt,
         title,
